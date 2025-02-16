@@ -7,7 +7,7 @@
     "build": "ng build --configuration production --output-path=dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production --base-href='/ivorya/' && gh-pages -d dist/ivorya"
+    "deploy": "ng build --configuration production --base-href='/ivorya/' && npx angular-cli-ghpages --dir=dist/ivorya"
   },
   "private": true,
   "dependencies": {
