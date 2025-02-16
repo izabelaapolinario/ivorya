@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: ng build --configuration production --output-path=dist/ivorya --prod
+        run: npm run build -- --configuration production --output-path=dist/ivorya
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
