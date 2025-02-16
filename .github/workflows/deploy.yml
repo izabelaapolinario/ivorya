@@ -1,3 +1,10 @@
+name: Deploy Angular to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Define o evento para ser acionado quando houver push para a branch main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,3 +23,13 @@ jobs:
       - name: Build para produção
         run: npm run build -- --configuration production --output-path=dist/ivorya
 
+      - name: Configurar Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          
+      - name: Publicar no GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/ivorya
