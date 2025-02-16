@@ -13,7 +13,6 @@ import { TeamSectionComponent } from "./team-section/team-section.component";
 import { FaqSectionComponent } from "./faq-section/faq-section.component";
 import { ContatoComponent } from "./contato/contato.component";
 
-
 @NgModule({
   declarations: [
     MensagemComponent,
@@ -35,7 +34,16 @@ import { ContatoComponent } from "./contato/contato.component";
   exports: [
     MensagemComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HeroSectionComponent,
+    AboutSectionComponent,
+    StatsSectionComponent,
+    ServicesSectionComponent,
+    TestimonialsSectionComponent,
+    PortfolioSectionComponent,
+    TeamSectionComponent,
+    FaqSectionComponent,
+    ContatoComponent,
   ]
 })
-export class ComponentsModule {}
+export class ComponentsModule { }
