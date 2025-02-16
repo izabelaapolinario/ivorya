@@ -17,11 +17,14 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Install Angular CLI globally
+        run: npm install -g @angular/cli
+
       - name: Install dependencies
         run: npm install
 
       - name: Build the project
-        run: npm run build -- --configuration production --output-path=dist/ivorya
+        run: ng build --configuration production --output-path=dist/ivorya --prod
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
