@@ -1,12 +1,13 @@
 {
-  "name": "ivorya-solucoes-digitais",
+  "name": "ivorya",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production --output-path=dist",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --configuration production --base-href='/ivorya/' && npx angular-cli-ghpages --dir=dist"
   },
   "private": true,
   "dependencies": {
