@@ -22,7 +22,8 @@ jobs:
         run: npm install
 
       - name: Build para produção
-        run: npm run build -- --prod --output-path=dist/ivorya
+        run: npm run build -- --configuration production --output-path=dist/ivorya
+
 
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
