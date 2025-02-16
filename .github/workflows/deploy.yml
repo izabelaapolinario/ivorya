@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Ou o nome do seu branch principal
+      - main  
 
 jobs:
   deploy:
@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: ng build --configuration production --output-path=dist/ivorya --prod
+        run: ng build --configuration production --output-path=dist/ivorya
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
