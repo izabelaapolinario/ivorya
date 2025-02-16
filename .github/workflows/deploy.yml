@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Ou o nome do seu branch principal (pode ser "master" ou outro)
+      - main  # Ou o nome do seu branch principal
 
 jobs:
   deploy:
@@ -15,13 +15,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build the project
-        run: npm run build -- --prod --output-path=dist/ivorya
+        run: ng build --configuration production --output-path=dist/ivorya --prod
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
