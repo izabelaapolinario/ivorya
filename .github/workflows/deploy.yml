@@ -3,11 +3,12 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Altere se sua branch principal não for "main"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout código
         uses: actions/checkout@v3
@@ -21,13 +22,7 @@ jobs:
         run: npm install
 
       - name: Build para produção
-        run: npm run deploy
-
-      - name: Configurar Git para autenticação com GitHub Token
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global url."https://${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
+        run: npm run build -- --prod --output-path=dist/ivorya
 
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
