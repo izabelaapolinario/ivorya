@@ -34,7 +34,8 @@
             "assets": [
               "src/assets"
             ],
-            "scripts": []
+            "scripts": [],
+             "baseHref": "/ivorya/"
           },
           "configurations": {
             "production": {
