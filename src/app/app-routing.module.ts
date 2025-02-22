@@ -5,6 +5,7 @@ import { CadastroComponent } from './pages/cadastro-user/cadastro.component';
 import { SucessoCadastroComponent } from './pages/cadastro-user/sucesso-cadastro/sucesso-cadastro.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { PrecoComponent } from './pages/preco/preco.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 const routes: Routes = [
@@ -37,5 +38,8 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ]
 })
 export class AppRoutingModule {}
