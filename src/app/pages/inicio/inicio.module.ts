@@ -5,7 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { RouterModule, Routes } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { InicioComponent } from './inicio.component';
-import { ComponentsModule } from "src/app/components/componentes.module";
+import { ComponentsModule } from "../../components/componentes.module";
 
 
 const routes: Routes = [

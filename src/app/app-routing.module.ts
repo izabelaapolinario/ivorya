@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './pages/cadastro-user/cadastro.component';
@@ -7,33 +6,37 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { PrecoComponent } from './pages/preco/preco.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-
 const routes: Routes = [
   {
     path: 'inicio',
     component: InicioComponent
   },
   {
+    path: 'contato',
+    loadChildren: () => import('./pages/contato/contato.module').then(m => m.ContatoModule) // ✅ Lazy Loading do ContatoModule
+  },
+  {
     path: 'cadastro-user',
-    component: CadastroComponent
+    loadChildren: () => import('./pages/cadastro-user/cadastro.module').then(m => m.CadastroModule) // ✅ Lazy Loading do CadastroModule
   },
   {
     path: 'cadastrosucesso',
     component: SucessoCadastroComponent
   },
-  { path: 'preco',
-     component: PrecoComponent },
+  {
+    path: 'preco',
+    component: PrecoComponent
+  },
   {
     path: '',
     redirectTo: 'inicio',
-    pathMatch: 'full' // Isso redireciona a raiz para 'inicio'
+    pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'inicio' // Redireciona qualquer rota inválida para 'inicio'
+    redirectTo: 'inicio'
   }
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -11,7 +11,7 @@ import { TestimonialsSectionComponent } from "./testimonials-section/testimonial
 import { PortfolioSectionComponent } from "./portfolio-section/portfolio-section.component";
 import { TeamSectionComponent } from "./team-section/team-section.component";
 import { FaqSectionComponent } from "./faq-section/faq-section.component";
-import { ContatoComponent } from "./contato/contato.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,11 +25,11 @@ import { ContatoComponent } from "./contato/contato.component";
     TestimonialsSectionComponent,
     PortfolioSectionComponent,
     TeamSectionComponent,
-    FaqSectionComponent,
-    ContatoComponent,
+    FaqSectionComponent
   ],
   imports: [
     CommonModule, 
+    FormsModule
   ],
   exports: [
     MensagemComponent,
@@ -42,8 +42,7 @@ import { ContatoComponent } from "./contato/contato.component";
     TestimonialsSectionComponent,
     PortfolioSectionComponent,
     TeamSectionComponent,
-    FaqSectionComponent,
-    ContatoComponent,
+    FaqSectionComponent
   ]
 })
 export class ComponentsModule { }

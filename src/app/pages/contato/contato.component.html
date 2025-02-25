@@ -3,78 +3,80 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Contact</h2>
-      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <h2>Entre em Contato</h2>
+      <p>Estamos à disposição para ajudá-lo a encontrar as melhores soluções tecnológicas para o seu negócio. Fale conosco!</p>
     </div><!-- End Section Title -->
-
+  
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-
+  
       <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
         <div class="row gy-5">
-
+  
           <div class="col-lg-4">
             <div class="info-item d-flex align-items-center">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <h3>Nosso Endereço</h3>
+                <p>Rua Exemplo, 123, Bairro Tech, São Paulo - SP, 12345-678</p>
               </div>
             </div>
           </div><!-- End Info Item -->
-
+  
           <div class="col-lg-4">
             <div class="info-item d-flex align-items-center">
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <h3>Fale Conosco</h3>
+                <p>+55 31 98543-0213</p>
               </div>
             </div>
           </div><!-- End Info Item -->
-
+  
           <div class="col-lg-4">
             <div class="info-item d-flex align-items-center">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
-                  <h3>Email Us</h3>
-                  <p>info&#64;example.com</p>
+                <h3>Email</h3>
+                <p>apolinario.izabela&#64;gmail.com</p>
               </div>
             </div>
           </div><!-- End Info Item -->
-
+  
         </div>
       </div>
-
-      <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+  
+      <!-- Contact Form -->
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
         <div class="row gy-4">
-
+  
           <div class="col-md-6">
-            <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            <input type="text" name="name" class="form-control" placeholder="Seu Nome" required [(ngModel)]="contato.name">
           </div>
-
-          <div class="col-md-6 ">
-            <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+  
+          <div class="col-md-6">
+            <input type="email" class="form-control" name="email" placeholder="Seu Email" required [(ngModel)]="contato.email">
           </div>
-
+  
           <div class="col-md-12">
-            <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            <input type="text" class="form-control" name="subject" placeholder="Assunto" required [(ngModel)]="contato.subject">
           </div>
-
+  
           <div class="col-md-12">
-            <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+            <textarea class="form-control" name="message" rows="6" placeholder="Mensagem" required [(ngModel)]="contato.message"></textarea>
           </div>
-
+  
           <div class="col-md-12 text-center">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-
-            <button type="submit">Send Message</button>
+            <div class="loading" *ngIf="isLoading">Carregando</div>
+            <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+            <div class="sent-message" *ngIf="messageSent">Sua mensagem foi enviada. Obrigado pelo contato!</div>
+  
+            <button type="submit" [disabled]="isLoading">Enviar Mensagem</button>
           </div>
-
+  
         </div>
       </form><!-- End Contact Form -->
-
+  
     </div>
-
+  
   </section><!-- /Contact Section -->
+  
