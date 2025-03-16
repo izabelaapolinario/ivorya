@@ -12,7 +12,7 @@ export class FaqSectionComponent {
   faqItems = [
     {
       question: 'Como posso entrar em contato com o suporte técnico?',
-      answer: 'Você pode entrar em contato pelo nosso portal de atendimento, chat online ou pelo e-mail suporte@empresa.com.'
+       answer: `Você pode entrar em contato com nosso suporte técnico através dos seguintes canais: <br> <br> ● WhatsApp: (31) 98543-0213 <br> ● E-mail: apolinario.izabela@gmail.com <br> ● Instagram: @ivoryasolucoes <br> <br> Estamos à disposição para ajudá-lo!`
     },
     {
       question: 'Quais são os planos e preços disponíveis?',

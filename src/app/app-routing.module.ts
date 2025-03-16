@@ -13,12 +13,16 @@ const routes: Routes = [
   },
   {
     path: 'contato',
-    loadChildren: () => import('./pages/contato/contato.module').then(m => m.ContatoModule) // ✅ Lazy Loading do ContatoModule
+    loadChildren: () => import('./pages/contato/contato.module').then(m => m.ContatoModule)
   },
   {
-    path: 'cadastro-user',
-    loadChildren: () => import('./pages/cadastro-user/cadastro.module').then(m => m.CadastroModule) // ✅ Lazy Loading do CadastroModule
+    path: 'cadastro',
+    loadChildren: () => import('./pages/cadastro-user/cadastro.module').then(m => m.CadastroModule) 
   },
+  {
+    path: 'sobre',
+    loadChildren: () => import('./pages/sobre/sobre.module').then(m => m.SobreModule)
+  },  
   {
     path: 'cadastrosucesso',
     component: SucessoCadastroComponent
@@ -39,7 +43,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }

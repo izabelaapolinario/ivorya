@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Contato } from '../../models/contato.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { Contato } from '../../models/contato.model';
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.css']
 })
-export class ContatoComponent {
+export class ContatoComponent implements OnInit {
  
   isLoading = false;
   messageSent = false;
@@ -18,6 +18,10 @@ export class ContatoComponent {
     subject: '',
     message: ''
   };
+
+  ngOnInit() {
+    window.scrollTo(0, 0);  // Garante que a página será carregada no topo
+  }
   
   onSubmit(form: any): void {
     if (form.valid) {

@@ -10,29 +10,30 @@
         <p>
           A Ivorya Soluções se especializa em desenvolver sistemas personalizados e soluções tecnológicas de ponta. Nossa equipe é formada por especialistas com vasta experiência em diversas áreas, o que nos permite entregar resultados excepcionais para nossos clientes.
         </p>
-        <a href="#" class="about-btn align-self-center align-self-xl-start"><span>Sobre nós</span> <i class="bi bi-chevron-right"></i></a>
+
+        <!-- Resumo da Empresa -->
+        <!-- <div class="company-overview">
+          <h4>Missão</h4>
+          <p>{{ companyOverview.mission }}</p>
+
+          <h4>Visão</h4>
+          <p>{{ companyOverview.vision }}</p>
+
+          <h4>Valores</h4>
+          <ul>
+            <li *ngFor="let value of companyOverview.values">{{ value }}</li>
+          </ul>
+        </div> -->
+
+        <a [routerLink]="['/sobre']" class="about-btn align-self-center align-self-xl-start"><span>Sobre nós</span> <i class="bi bi-chevron-right"></i></a>
       </div>
       <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
         <div class="row gy-4">
-          <div class="col-md-6 icon-box position-relative">
-            <i class="bi bi-briefcase"></i>
-            <h4><a href="" class="stretched-link">Soluções Personalizadas</a></h4>
-            <p>Entendemos as necessidades específicas de cada cliente e desenvolvemos soluções sob medida para atender a esses requisitos.</p>
-          </div>
-          <div class="col-md-6 icon-box position-relative">
-            <i class="bi bi-gem"></i>
-            <h4><a href="" class="stretched-link">Inovação e Tecnologia</a></h4>
-            <p>Utilizamos as tecnologias mais avançadas para criar soluções inovadoras que impulsionam o crescimento de empresas.</p>
-          </div>
-          <div class="col-md-6 icon-box position-relative">
-            <i class="bi bi-broadcast"></i>
-            <h4><a href="" class="stretched-link">Compromisso com a Excelência</a></h4>
-            <p>Nossa equipe é apaixonada pelo que faz e está sempre comprometida com a entrega de resultados de alta qualidade.</p>
-          </div>
-          <div class="col-md-6 icon-box position-relative">
-            <i class="bi bi-easel"></i>
-            <h4><a href="" class="stretched-link">Visão Estratégica</a></h4>
-            <p>Trabalhamos em estreita colaboração com nossos clientes, oferecendo uma visão estratégica para ajudá-los a alcançar seus objetivos de negócio.</p>
+          <!-- Exibindo os serviços -->
+          <div *ngFor="let service of services" class="col-md-6 icon-box position-relative">
+            <i [class]="service.icon"></i>
+            <h4><a href="" class="stretched-link">{{ service.title }}</a></h4>
+            <p>{{ service.description }}</p>
           </div>
         </div>
       </div>

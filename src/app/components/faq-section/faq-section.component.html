@@ -15,7 +15,7 @@
             <i class="faq-icon bi bi-question-circle"></i>
             <h3>{{ item.question }}</h3>
             <div class="faq-content" *ngIf="i === activeIndex">
-              <p>{{ item.answer }}</p>
+              <p [innerHTML]="item.answer"></p>
             </div>
             <i class="faq-toggle bi" 
                [ngClass]="{'bi-chevron-down': i === activeIndex, 'bi-chevron-right': i !== activeIndex}"></i>

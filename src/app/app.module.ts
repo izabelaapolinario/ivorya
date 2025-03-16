@@ -12,7 +12,8 @@ import { InicioModule } from "./pages/inicio/inicio.module";
 import { PrecoModule } from "./pages/preco/preco.module";
 import { ComponentsModule } from "./components/componentes.module";
 import { GlobalFunctionsService } from "./directives/global-functions.service";
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SobreModule } from "./pages/sobre/sobre.module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,13 +22,15 @@ import { GlobalFunctionsService } from "./directives/global-functions.service";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     ComponentsModule,
     CadastroModule,
     InicioModule,
-    PrecoModule
+    PrecoModule,
+    SobreModule
   ],
   providers: [GlobalFunctionsService],
   bootstrap: [AppComponent],

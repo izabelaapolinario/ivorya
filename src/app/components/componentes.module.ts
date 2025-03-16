@@ -12,6 +12,8 @@ import { PortfolioSectionComponent } from "./portfolio-section/portfolio-section
 import { TeamSectionComponent } from "./team-section/team-section.component";
 import { FaqSectionComponent } from "./faq-section/faq-section.component";
 import { FormsModule } from "@angular/forms";
+import { ServiceDetalhesComponent } from "./services-section/service-detalhes/service-detalhes.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -25,11 +27,13 @@ import { FormsModule } from "@angular/forms";
     TestimonialsSectionComponent,
     PortfolioSectionComponent,
     TeamSectionComponent,
-    FaqSectionComponent
+    FaqSectionComponent,
+    ServiceDetalhesComponent
   ],
   imports: [
     CommonModule, 
-    FormsModule
+    FormsModule,
+    RouterModule  
   ],
   exports: [
     MensagemComponent,
@@ -42,7 +46,8 @@ import { FormsModule } from "@angular/forms";
     TestimonialsSectionComponent,
     PortfolioSectionComponent,
     TeamSectionComponent,
-    FaqSectionComponent
+    FaqSectionComponent,
+    ServiceDetalhesComponent
   ]
 })
 export class ComponentsModule { }

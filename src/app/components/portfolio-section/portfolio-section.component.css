@@ -1,0 +1,22 @@
+.button-portfolio {
+    padding: 8px 30px 9px;
+    color: green; 
+    border-radius: 50px;
+    transition: .3s;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid green; 
+  }
+  
+  .button-portfolio i {
+    font-size: 16px;
+  }
+  
+  .button-portfolio:hover {
+    background: green; 
+    color: white; 
+  }
+  

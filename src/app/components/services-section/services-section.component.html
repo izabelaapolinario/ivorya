@@ -5,48 +5,30 @@
   </div>
   <div class="container">
     <div class="row gy-4">
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Consultoria Estratégica</a></h4>
-          <p class="description">Ajudamos empresas a definir estratégias de negócios eficazes, baseadas em análises detalhadas e conhecimento do mercado.</p>
+      <div 
+        class="col-lg-4 col-md-6 service-item d-flex" 
+        data-aos="fade-up" 
+        *ngFor="let service of services; let i = index" 
+        [attr.data-aos-delay]="(i + 1) * 100"
+      >
+        <div class="icon flex-shrink-0">
+          <i [class]="service.icon"></i>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
         <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Desenvolvimento de Software</a></h4>
-          <p class="description">Desenvolvemos sistemas e plataformas sob medida para atender às necessidades exclusivas de cada cliente, com alta performance e escalabilidade.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Análise de Dados</a></h4>
-          <p class="description">Fornecemos insights valiosos a partir da análise de grandes volumes de dados, ajudando empresas a tomar decisões informadas e estratégicas.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-        <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Automação de Processos</a></h4>
-          <p class="description">Implementamos soluções de automação que reduzem custos operacionais e aumentam a eficiência dos processos empresariais.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-        <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Transformação Digital</a></h4>
-          <p class="description">Apoiamos empresas na transformação digital, integrando novas tecnologias aos seus processos e sistemas para garantir a competitividade no mercado.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-        <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Suporte e Manutenção</a></h4>
-          <p class="description">Oferecemos suporte contínuo e serviços de manutenção para garantir o bom funcionamento dos sistemas e plataformas desenvolvidos.</p>
+          <h4 class="title">
+            <a href="javascript:void(0)" class="stretched-link" (click)="openModal(service)" data-bs-toggle="modal" data-bs-target="#serviceModal">
+              {{ service.title }}
+            </a>
+          </h4>
+          <p class="description">{{ service.description }}</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<app-service-detalhes 
+  *ngIf="selectedService" 
+  [service]="selectedService" 
+  (close)="closeModal()">
+</app-service-detalhes>
