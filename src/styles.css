@@ -169,7 +169,7 @@ a {
 .testimonials .container{position: relative;z-index: 3;}
 .testimonials .testimonials-carousel,.testimonials .testimonials-slider{overflow: hidden;}
 .testimonials .testimonial-item{text-align: center;}
-.testimonials .testimonial-item .testimonial-img{width: 100px;border-radius: 50%;border: 6px solid color-mix(in srgb,var(--default-color),transparent 85%);margin: 0 auto;}
+.testimonials .testimonial-item .testimonial-img{width: 100px;border-radius: 20%;border: 6px solid color-mix(in srgb,var(--default-color),transparent 85%);margin: 0 auto;}
 .testimonials .testimonial-item h3{font-size: 20px;font-weight: 700;margin: 10px 0 5px;}
 .testimonials .testimonial-item h4{font-size: 14px;margin: 0 0 15px;color: color-mix(in srgb,var(--default-color),transparent 40%);}
 .testimonials .testimonial-item .stars{margin-bottom: 15px;}

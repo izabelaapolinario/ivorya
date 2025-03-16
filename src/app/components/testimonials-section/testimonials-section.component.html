@@ -1,11 +1,11 @@
 <section id="testimonials" class="testimonials section dark-background">
-  <!-- Imagem de fundo dos depoimentos -->
-  <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="Background dos depoimentos">
+  <!-- Fundo com gradiente e nuvens coloridas -->
+  <div class="testimonials-bg"></div>
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <!-- Título e descrição da seção -->
     <div class="section-title text-center">
-      <h2>O que dizem sobre a Ivorya Soluções Digitais</h2>
+      <h2>Depoimentos de nossos Clientes</h2>
       <p>Veja como nossa expertise e soluções inovadoras têm transformado empresas e potencializado seus resultados.</p>
     </div>
     
@@ -25,8 +25,12 @@
         </p>
       </div>
 
-      <!-- Navegação -->
-      <div class="swiper-pagination"></div> <!-- Para manter a classe do swiper-pagination -->
-    </div>
+     <!-- Navegação -->
+     <div class="swiper-pagination"></div> <!-- Para manter a classe do swiper-pagination -->
+     <div class="navigation">
+       <button class="prev" (click)="prevTestimonial()">&#10094;</button>
+       <button class="next" (click)="nextTestimonial()">&#10095;</button>
+     </div>
+   </div>
   </div>
 </section>

@@ -28,14 +28,15 @@
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    text-indent: 30px;
   }
   
   /* Missão, Visão e Valores */
   .sobre .valores {
     margin-top: 50px;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #b6ddc7;
+    box-shadow: 0 10px 9px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
   }
   
@@ -43,12 +44,14 @@
     font-size: 26px;
     font-weight: 600;
     color: #0056b3;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
     margin-bottom: 20px;
   }
   
   .sobre .row p {
     font-size: 16px;
-    color: #333;
+    color: black;
     line-height: 1.6;
   }
   
@@ -59,16 +62,22 @@
   
   .sobre .row ul li {
     font-size: 16px;
-    color: #333;
+    color: black;
     padding: 10px 0;
   }
   
   .sobre .fundadora h3 {
-    font-size: 32px;
+    font-size: 36px;
     color: #0056b3;
     margin-top: 40px;
     text-align: center;
     margin-bottom: 20px;
+    font-weight: bold; /* Adicionei negrito */
+    text-transform: uppercase; /* Transformei o texto em maiúsculas */
+    letter-spacing: 1px; /* Adicionei espaçamento entre letras */
+    background: linear-gradient(to right, #0056b3, #3dce8f); /* Adicionei um gradiente ao texto */
+    -webkit-background-clip: text; /* Para aplicar o gradiente ao texto */
+    color: transparent; /* Para aplicar o gradiente ao texto */
   }
   
   .sobre .fundadora p {
