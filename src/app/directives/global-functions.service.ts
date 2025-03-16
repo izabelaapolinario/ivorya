@@ -8,51 +8,47 @@ export class GlobalFunctionsService {
     this.init();
   }
 
-  private init() {
+  public init() {
     this.toggleScrolled();
     this.mobileNavToggle();
     this.initScrollTop();
     this.handlePreloader();
   }
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  private toggleScrolled() {
-    const selectBody = document.querySelector('body');
+  public toggleScrolled() {
     const selectHeader = document.querySelector('#header');
     if (!selectHeader) return;
-    
+  
     const onScroll = () => {
       if (window.scrollY > 100) {
-        selectBody?.classList.add('scrolled');
+        selectHeader.classList.add('scrolled');
       } else {
-        selectBody?.classList.remove('scrolled');
+        selectHeader.classList.remove('scrolled');
       }
     };
-
+  
     document.addEventListener('scroll', onScroll);
     window.addEventListener('load', onScroll);
   }
 
-  /**
-   * Mobile nav toggle
-   */
-  private mobileNavToggle() {
+  public  mobileNavToggle() {
     const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-    if (!mobileNavToggleBtn) return;
+    const navMenu = document.querySelector('.navmenu ul');
+
+    if (!mobileNavToggleBtn || !navMenu) return;
 
     mobileNavToggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('mobile-nav-active');
+      // Alterna a visibilidade do menu mobile
+      navMenu.classList.toggle('show');
+      // Alterna a classe do ícone (hamburguer para x)
       mobileNavToggleBtn.classList.toggle('bi-list');
       mobileNavToggleBtn.classList.toggle('bi-x');
+      // Alterna a classe do body para ativar o menu
+      document.body.classList.toggle('mobile-nav-active');
     });
   }
 
-  /**
-   * Scroll top button functionality
-   */
-  private initScrollTop() {
+  public  initScrollTop() {
     const scrollTop = document.querySelector('.scroll-top');
     if (!scrollTop) return;
 
@@ -73,10 +69,7 @@ export class GlobalFunctionsService {
     window.addEventListener('load', toggleScrollTop);
   }
 
-  /**
-   * Preloader
-   */
-  private handlePreloader() {
+  public  handlePreloader() {
     const preloader = document.querySelector('#preloader');
     if (preloader) {
       window.addEventListener('load', () => {

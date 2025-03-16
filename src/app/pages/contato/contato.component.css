@@ -1,3 +1,18 @@
 .contact{
-    margin-top: 7%;
+    margin-top: 5%;
+}
+.section-title h2 {
+    white-space: normal; /* Permite que o texto quebre para a linha de baixo */
+    word-wrap: break-word; /* Garante a quebra de palavras longas */
+    overflow: visible; /* Garante que não haja corte */
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que ocupe todo o espaço disponível */
+    padding: 50px; /* Ajuste conforme necessário */
+    margin: 0 auto;
+    max-width: 100%;
+}
+@media (max-width: 600px) {
+    .section-title h2 {
+        font-size: 24px; /* Diminui o tamanho do título */
+    }
 }

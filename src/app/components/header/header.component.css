@@ -19,3 +19,57 @@
       padding-right: 20px; /* Ajuste para garantir que o botão "Contato" não seja afetado */
     }
   }
+
+
+  /* Inicialmente, o menu é ocultado em dispositivos móveis */
+.navmenu ul {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Quando o menu mobile está ativo, ele aparece */
+.navmenu ul.show {
+  display: block;
+  background-color: #fff;  /* Ajuste a cor de fundo conforme necessário */
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos do botão de menu */
+.mobile-nav-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Quando o menu mobile está ativo, o ícone muda para 'x' */
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+/* Estilo para o menu ocupar toda a tela no mobile */
+.mobile-nav-active .navmenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav-active .navmenu ul {
+  display: block;
+  text-align: center;
+}
+
+.mobile-nav-active .mobile-nav-toggle {
+  color: #fff;
+}
+
+
+  
