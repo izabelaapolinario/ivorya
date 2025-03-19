@@ -25,14 +25,20 @@
   /**
    * Mobile nav toggle
    */
+// Função para alternar a visibilidade do menu mobile
+function mobileNavToogle() {
+  // Toggle a classe de exibição do menu
+  document.querySelector('.navmenu ul').classList.toggle('show');
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  // Toggle o ícone do menu (de lista para 'x')
+  mobileNavToggleBtn.classList.toggle('bi-list');
+  mobileNavToggleBtn.classList.toggle('bi-x');
+}
+
+// Associa a função de toggle ao clique do ícone de menu
+mobileNavToggleBtn.addEventListener('click', mobileNavToggleBtn);
+
 
   /**
    * Hide mobile nav on same-page/hash links
