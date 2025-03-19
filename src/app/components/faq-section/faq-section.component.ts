@@ -12,11 +12,11 @@ export class FaqSectionComponent {
   faqItems = [
     {
       question: 'Como posso entrar em contato com o suporte técnico?',
-       answer: `Você pode entrar em contato com nosso suporte técnico através dos seguintes canais: <br> <br> ● WhatsApp: (31) 98543-0213 <br> ● E-mail: apolinario.izabela@gmail.com <br> ● Instagram: @ivoryasolucoes <br> <br> Estamos à disposição para ajudá-lo!`
+       answer: `Você pode entrar em contato com nosso suporte técnico através dos seguintes canais: <br> <br> ● WhatsApp: (31) 98543-0213 <br> ● E-mail: ivoryasolucoes@gmail.com <br> ● Instagram: @ivoryasolucoes <br> <br> Estamos à disposição para ajudá-lo!`
     },
     {
       question: 'Quais são os planos e preços disponíveis?',
-      answer: 'Temos diferentes planos que atendem desde pequenas empresas até grandes corporações. Consulte nossa página de preços para mais detalhes.'
+      answer: 'Temos diferentes planos que atendem desde pequenas empresas até grandes corporações. Entre em contato com nosso time para mais detalhes.'
     },
     {
       question: 'Posso testar o software antes de comprar?',
@@ -28,7 +28,7 @@ export class FaqSectionComponent {
     },
     {
       question: 'Quais são as formas de pagamento aceitas?',
-      answer: 'Aceitamos cartões de crédito, boleto bancário e pagamento via PIX.'
+      answer: 'Aceitamos boleto bancário e pagamento via PIX.'
     }
   ];
   
