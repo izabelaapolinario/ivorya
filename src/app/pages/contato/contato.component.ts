@@ -55,6 +55,7 @@ export class ContatoComponent implements OnInit {
       this.appService.inserirContato(this.contato).subscribe({
         next: () => {
           this.messageSent = 'Sua mensagem foi enviada. Obrigado pelo contato!';
+          alert(this.messageSent);
           this.contato = new Contato();
           this.contatoForm.reset();
         
@@ -62,6 +63,9 @@ export class ContatoComponent implements OnInit {
         error: (err) => {
           console.error('Erro ao enviar a mensagem:', err); 
           this.errorMessage = 'Erro ao enviar mensagem. Tente novamente!';
+          alert(this.errorMessage);
+          this.contato = new Contato();
+          this.contatoForm.reset();
         }
       });
     } 
