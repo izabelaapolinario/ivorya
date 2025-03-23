@@ -44,25 +44,50 @@
   
         </div>
       </div>
-  
+      
       <!-- Contact Form -->
-      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+      <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+        
         <div class="row gy-4">
   
           <div class="col-md-6">
-            <input type="text" name="name" class="form-control" placeholder="Seu Nome" required [(ngModel)]="contato.name">
+            <input     type="text" 
+            class="form-control" 
+            placeholder="Seu Nome" 
+            formControlName="nome"
+            [(ngModel)]="contato.nome" 
+            name="nome"
+            required>
           </div>
   
           <div class="col-md-6">
-            <input type="email" class="form-control" name="email" placeholder="Seu Email" required [(ngModel)]="contato.email">
+            <input  type="email" 
+            class="form-control" 
+            placeholder="Seu Email" 
+            formControlName="email" 
+            [(ngModel)]="contato.email" 
+            name="email"
+            required>
           </div>
   
           <div class="col-md-12">
-            <input type="text" class="form-control" name="subject" placeholder="Assunto" required [(ngModel)]="contato.subject">
+            <input  type="text" 
+            class="form-control" 
+            placeholder="Assunto" 
+            formControlName="assunto" 
+            [(ngModel)]="contato.assunto" 
+            name="assunto"
+            required>
           </div>
   
           <div class="col-md-12">
-            <textarea class="form-control" name="message" rows="6" placeholder="Mensagem" required [(ngModel)]="contato.message"></textarea>
+            <textarea class="form-control" 
+            rows="6" 
+            placeholder="Mensagem" 
+            formControlName="mensagem" 
+            [(ngModel)]="contato.mensagem" 
+            name="mensagem"
+            required></textarea>
           </div>
   
           <div class="col-md-12 text-center">

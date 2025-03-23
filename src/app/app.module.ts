@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MaiorIdadeDirective } from "./directives/maior-idade.directive";
 import { ValidandoCepDirective } from "./directives/validando-cep.directive";
 import { CadastroModule } from "./pages/cadastro-user/cadastro.module";
@@ -14,6 +14,7 @@ import { ComponentsModule } from "./components/componentes.module";
 import { GlobalFunctionsService } from "./directives/global-functions.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SobreModule } from "./pages/sobre/sobre.module";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { SobreModule } from "./pages/sobre/sobre.module";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatSnackBarModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
@@ -32,7 +34,7 @@ import { SobreModule } from "./pages/sobre/sobre.module";
     PrecoModule,
     SobreModule
   ],
-  providers: [GlobalFunctionsService],
+  providers: [GlobalFunctionsService, provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -1,8 +1,8 @@
-
-export interface Contato {
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
-  }
-  
+export class Contato {
+  idContato?: number;
+  nome: string = '';
+  email: string = '';
+  assunto: string = '';
+  mensagem: string = '';
+  dataEnvio?: Date = new Date();
+}
