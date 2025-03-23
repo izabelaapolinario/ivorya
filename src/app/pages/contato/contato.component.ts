@@ -34,6 +34,16 @@ export class ContatoComponent implements OnInit {
       assunto: ['', Validators.required],
       mensagem: ['', Validators.required],
     });
+
+    this.contato = {
+      ...this.contato,
+      nome: this.contatoForm.value.nome,
+      email: this.contatoForm.value.email,
+      assunto: this.contatoForm.value.assunto,
+      mensagem: this.contatoForm.value.mensagem,
+      dataEnvio: new Date()
+    };
+    
   }
   onSubmit() {
     this.errorMessage = '';

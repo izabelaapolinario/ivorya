@@ -1,8 +1,8 @@
 export class Contato {
-  idContato?: number;
+  idContato: number = 0;
   nome: string = '';
   email: string = '';
   assunto: string = '';
   mensagem: string = '';
-  dataEnvio?: Date = new Date();
+  dataEnvio: Date = new Date();
 }
