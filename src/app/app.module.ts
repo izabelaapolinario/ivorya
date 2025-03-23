@@ -15,6 +15,7 @@ import { GlobalFunctionsService } from "./directives/global-functions.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SobreModule } from "./pages/sobre/sobre.module";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatIconModule } from '@angular/material/icon'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     BrowserModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    MatIconModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,

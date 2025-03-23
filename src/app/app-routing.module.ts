@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/sobre/sobre.module').then(m => m.SobreModule)
   },  
   {
+    path: 'visualiza-mensagens',
+    loadChildren: () => import('./pages/visualizar-mensagens/visualizar-mensagens.module').then(m => m.VisualizarMensagemModule)
+  }, 
+  {
     path: 'cadastrosucesso',
     component: SucessoCadastroComponent
   },

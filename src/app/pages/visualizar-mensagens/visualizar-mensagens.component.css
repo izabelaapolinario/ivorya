@@ -1,0 +1,27 @@
+/* Garantir que o corpo do layout ocupe toda a altura da tela */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Container principal que usa Flexbox para centralizar o conteúdo */
+.container {
+  display: flex;
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
+  height: 100vh;            /* Altura da tela */
+}
+
+/* Tabela */
+table {
+  width: 100%;  /* A tabela ocupa toda a largura disponível */
+  border-collapse: collapse;  /* Colapsa as bordas da tabela */
+  background-color: rgb(224, 255, 211);
+}
+
+/* Estilos adicionais para as células da tabela */
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
