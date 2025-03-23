@@ -23,7 +23,6 @@ export class AppService {
     return this.http.post<any>(`${this.API_URL}/contato/inserir`, contato);
   }
 
-
   deletarContato(id: number): Observable<any> {
     return this.http.delete<any>(`${this.API_URL}/contato/deletar/${id}`);
   }
