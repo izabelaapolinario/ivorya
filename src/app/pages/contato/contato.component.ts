@@ -12,10 +12,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContatoComponent implements OnInit {
   contatoForm!: FormGroup;
   isLoading = false;
-  messageSent = false;
+  messageSent = '';
   errorMessage = '';
-  mensagem = '';
-  mensagemTipo = '';
   contato: Contato = new Contato();
 
   constructor(
@@ -38,25 +36,23 @@ export class ContatoComponent implements OnInit {
     });
   }
   onSubmit() {
+    this.errorMessage = '';
+    this.messageSent = ''; 
+
     if (this.contatoForm.valid) {
       this.isLoading = true;
       console.warn(this.contato)
       this.appService.inserirContato(this.contato).subscribe({
         next: () => {
-          this.snackBar.open('Mensagem enviada com sucesso!', 'Fechar', {
-            duration: 3000,
-            panelClass: ['snackbar-success'],
-          });
+          this.messageSent = 'Sua mensagem foi enviada. Obrigado pelo contato!';
           this.contato = new Contato();
           this.contatoForm.reset();
-          this.messageSent = true;
+        
         },
-        error: () => {
-          this.snackBar.open('Erro ao enviar mensagem. Tente novamente!', 'Fechar', {
-            duration: 3000,
-            panelClass: ['snackbar-error'],
-          });
-        },
+        error: (err) => {
+          console.error('Erro ao enviar a mensagem:', err); 
+          this.errorMessage = 'Erro ao enviar mensagem. Tente novamente!';
+        }
       });
     } 
     else {

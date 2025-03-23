@@ -1,107 +1,91 @@
 <!-- Contact Section -->
 <section id="contact" class="contact section">
 
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Entre em Contato</h2>
-      <p>Estamos à disposição para ajudá-lo a encontrar as melhores soluções tecnológicas para o seu negócio. Fale conosco!</p>
-    </div><!-- End Section Title -->
-  
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-  
-      <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
-        <div class="row gy-5">
-  
-          <div class="col-lg-4">
-            <div class="info-item d-flex align-items-center">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Nosso Endereço</h3>
-                <p>Avenida dos Andradas, 4082, Esplanada, Minas Gerais - MG, 30280-020</p>
-              </div>
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Entre em Contato</h2>
+    <p>Estamos à disposição para ajudá-lo a encontrar as melhores soluções tecnológicas para o seu negócio. Fale
+      conosco!</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+      <div class="row gy-5">
+
+        <div class="col-lg-4">
+          <div class="info-item d-flex align-items-center">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Nosso Endereço</h3>
+              <p>Avenida dos Andradas, 4082, Esplanada, Minas Gerais - MG, 30280-020</p>
             </div>
-          </div><!-- End Info Item -->
-  
-          <div class="col-lg-4">
-            <div class="info-item d-flex align-items-center">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Fale Conosco</h3>
-                <p>+55 31 98543-0213</p>
-              </div>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="col-lg-4">
+          <div class="info-item d-flex align-items-center">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Fale Conosco</h3>
+              <p>+55 31 98543-0213</p>
             </div>
-          </div><!-- End Info Item -->
-  
-          <div class="col-lg-4">
-            <div class="info-item d-flex align-items-center">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email</h3>
-                <p>ivoryasolucoes&#64;gmail.com</p>
-              </div>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="col-lg-4">
+          <div class="info-item d-flex align-items-center">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email</h3>
+              <p>ivoryasolucoes&#64;gmail.com</p>
             </div>
-          </div><!-- End Info Item -->
-  
-        </div>
+          </div>
+        </div><!-- End Info Item -->
+
       </div>
-      
-      <!-- Contact Form -->
-      <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
-        
-        <div class="row gy-4">
-  
-          <div class="col-md-6">
-            <input     type="text" 
-            class="form-control" 
-            placeholder="Seu Nome" 
-            formControlName="nome"
-            [(ngModel)]="contato.nome" 
-            name="nome"
-            required>
-          </div>
-  
-          <div class="col-md-6">
-            <input  type="email" 
-            class="form-control" 
-            placeholder="Seu Email" 
-            formControlName="email" 
-            [(ngModel)]="contato.email" 
-            name="email"
-            required>
-          </div>
-  
-          <div class="col-md-12">
-            <input  type="text" 
-            class="form-control" 
-            placeholder="Assunto" 
-            formControlName="assunto" 
-            [(ngModel)]="contato.assunto" 
-            name="assunto"
-            required>
-          </div>
-  
-          <div class="col-md-12">
-            <textarea class="form-control" 
-            rows="6" 
-            placeholder="Mensagem" 
-            formControlName="mensagem" 
-            [(ngModel)]="contato.mensagem" 
-            name="mensagem"
-            required></textarea>
-          </div>
-  
-          <div class="col-md-12 text-center">
-            <div class="loading" *ngIf="isLoading">Carregando</div>
-            <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
-            <div class="sent-message" *ngIf="messageSent">Sua mensagem foi enviada. Obrigado pelo contato!</div>
-  
-            <button type="submit" [disabled]="isLoading">Enviar Mensagem</button>
-          </div>
-  
-        </div>
-      </form><!-- End Contact Form -->
-  
     </div>
-  
-  </section><!-- /Contact Section -->
-  
+
+    <!-- Contact Form -->
+    <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()" class="php-email-form" data-aos="fade-up"
+      data-aos-delay="300">
+
+      <div class="row gy-4">
+
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Seu Nome" formControlName="nome"
+            [(ngModel)]="contato.nome" name="nome" required>
+        </div>
+
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Seu Email" formControlName="email"
+            [(ngModel)]="contato.email" name="email" required>
+        </div>
+
+        <div class="col-md-12">
+          <input type="text" class="form-control" placeholder="Assunto" formControlName="assunto"
+            [(ngModel)]="contato.assunto" name="assunto" required>
+        </div>
+
+        <div class="col-md-12">
+          <textarea class="form-control" rows="6" placeholder="Mensagem" formControlName="mensagem"
+            [(ngModel)]="contato.mensagem" name="mensagem" required></textarea>
+        </div>
+
+        <div class="col-md-12 text-center">
+          <button type="submit" [disabled]="isLoading">Enviar Mensagem</button>
+        </div>
+
+      </div>
+    </form><!-- End Contact Form -->
+
+    <div class="col-md-12 text-center">
+
+      <div *ngIf="isLoading" class="loading">Carregando ...</div>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <div *ngIf="messageSent" class="sent-message">{{messageSent}}</div>
+    </div>
+
+  </div>
+
+</section><!-- /Contact Section -->
