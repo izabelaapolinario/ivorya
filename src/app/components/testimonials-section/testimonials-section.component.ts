@@ -16,7 +16,7 @@ export class TestimonialsSectionComponent implements OnInit {
     },
     {
       image: 'assets/img/testimonials/testimonials-1.jpg',
-      name: 'Fernanda Oliveira',
+      name: 'Fernando Oliveira',
       position: 'Gerente de Projetos em uma empresa de software',
       feedback: 'A equipe da Ivorya Soluções foi fundamental na nossa transformação digital. Cada fase do projeto foi conduzida com excelência e dedicação, superando nossas expectativas.'
     },
