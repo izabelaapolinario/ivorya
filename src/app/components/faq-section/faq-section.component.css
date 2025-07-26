@@ -1,0 +1,13 @@
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  padding-left: 20px; /* opcional para indentação */
+}
+
+.faq-item.faq-active .faq-content {
+  max-height: 500px; /* valor alto o suficiente para o conteúdo */
+  opacity: 1;
+  margin-top: 10px;
+}

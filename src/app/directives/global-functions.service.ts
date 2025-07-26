@@ -69,12 +69,24 @@ export class GlobalFunctionsService {
     window.addEventListener('load', toggleScrollTop);
   }
 
-  public  handlePreloader() {
-    const preloader = document.querySelector('#preloader');
-    if (preloader) {
-      window.addEventListener('load', () => {
-        preloader.remove();
-      });
-    }
+public handlePreloader() {
+const preloader = document.querySelector('#preloader');
+  const body = document.body;
+  
+  // Adiciona classe que bloqueia animação enquanto o preloader está ativo
+  body.classList.add('preloader-active');
+
+  if (preloader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        preloader.classList.add('preloader-hide');
+        setTimeout(() => {
+          preloader.remove();
+          // Remove a classe para liberar animações do conteúdo
+          body.classList.remove('preloader-active');
+        }, 800);
+      }, 2000);
+    });
   }
+}
 }

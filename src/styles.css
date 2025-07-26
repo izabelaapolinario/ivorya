@@ -78,11 +78,89 @@ h1,h2,h3,h4,h5,h6{color: var(--heading-color);font-family: var(--heading-font);}
 .footer .credits{font-size: 13px;padding-top: 5px;}
 .credits-developer{color: #0d0db5;}
 .credits-developer:hover{color: #29639d;}
-#preloader{position: fixed;inset: 0;z-index: 999999;overflow: hidden;background: var(--background-color);transition: .6s ease-out;}
+/* #preloader{position: fixed;inset: 0;z-index: 999999;overflow: hidden;background: var(--background-color);transition: .6s ease-out;}
 #preloader:before{content: "";position: fixed;top: calc(50% - 30px);left: calc(50% - 30px);border: 6px solid #fff;border-color: var(--accent-color) transparent var(--accent-color) transparent;border-radius: 50%;width: 60px;height: 60px;animation: 1.5s linear infinite animate-preloader;}
 @keyframes animate-preloader{
 0%{transform: rotate(0);}
 100%{transform: rotate(360deg);}
+} */
+/* Preloader com fundo liso */
+/* === PRELOADER COM LOGO E REVELAÇÃO CIRCULAR === */
+/* PRELOADER: tela cheia com fundo branco embasado */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background-color: rgba(255, 255, 255, 0.7); /* leve embasado branco */
+  backdrop-filter: blur(4px); /* aplica o embasado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* LOGO animando de desbotada até a cor original */
+#preloader-logo {
+  width: 140px;
+  height: auto;
+  filter: grayscale(100%) brightness(1.5) contrast(0.7);
+  opacity: 0;
+  animation: fill-logo 2s ease-out forwards;
+}
+
+/* Animação para restaurar a cor da logo */
+@keyframes fill-logo {
+  0% {
+    filter: grayscale(100%) brightness(1.5) contrast(0.7);
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    filter: grayscale(0%) brightness(1) contrast(1);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Esconde tudo suavemente */
+.preloader-hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.preloader-active [data-aos="fade-up"] {
+  opacity: 1 !important;        /* já visível, sem animação */
+  transform: none !important;   /* sem deslocamento */
+  animation: none !important;   /* animação bloqueada */
+}
+
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-name: fadeUpIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+[data-aos="fade-up"][data-aos-delay="100"] {
+  animation-delay: 0.4s;
+}
+
+[data-aos="fade-up"][data-aos-delay="200"] {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUpIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .scroll-top{position: fixed;visibility: hidden;opacity: 0;right: 15px;bottom: 15px;z-index: 99999;background-color: var(--accent-color);width: 40px;height: 40px;border-radius: 4px;transition: .4s;}

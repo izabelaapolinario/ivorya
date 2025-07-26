@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './sobre.component.css'
 })
 export class SobreComponent implements OnInit {
-  empresa: string = "Ivorya Soluções Digitais";
+  empresa: string = "Izabela Soluções";
 
   ngOnInit() {
     window.scrollTo(0, 0);  

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations';
 
 @Component({
@@ -14,7 +14,7 @@ import { trigger, transition, animate, style } from '@angular/animations';
     ])
   ]
 })
-export class StatsSectionComponent implements OnInit {
+export class StatsSectionComponent implements AfterViewInit {
   // Definindo o tipo com índice para permitir acessar as propriedades dinamicamente
   clientesSatisfeitos: number = 12;
   projetosConcluidos: number = 13;
@@ -28,7 +28,22 @@ export class StatsSectionComponent implements OnInit {
     horasDeSuporte: 0,
     profissionaisDedicados: 0
   };
+constructor(private el: ElementRef) {}
 
+  ngAfterViewInit() {
+    const statsSection = this.el.nativeElement.querySelector('#stats');
+
+    const onScroll = () => {
+      const rect = statsSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.8) {
+        statsSection.classList.add('animate');
+        window.removeEventListener('scroll', onScroll);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+    onScroll(); // verifica logo caso já esteja visível
+  }
   ngOnInit() {
     // Inicializando os contadores
     this.incrementCounter('clientesSatisfeitos', 232);

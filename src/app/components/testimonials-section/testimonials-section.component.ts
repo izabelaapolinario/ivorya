@@ -12,37 +12,37 @@ export class TestimonialsSectionComponent implements OnInit {
       image: 'assets/img/testimonials/testimonials-5.jpg',
       name: 'Carlos Henrique',
       position: 'CEO de uma empresa de tecnologia',
-      feedback: 'A Ivorya Soluções desenvolveu uma plataforma inovadora que realmente transformou nossa empresa. A abordagem personalizada e o compromisso com resultados concretos foram essenciais para nosso sucesso.'
+      feedback: 'A Izabela Soluções desenvolveu uma plataforma inovadora que realmente transformou nossa empresa. A abordagem personalizada e o compromisso com resultados concretos foram essenciais para nosso sucesso.'
     },
     {
       image: 'assets/img/testimonials/testimonials-1.jpg',
       name: 'Fernando Oliveira',
       position: 'Gerente de Projetos em uma empresa de software',
-      feedback: 'A equipe da Ivorya Soluções foi fundamental na nossa transformação digital. Cada fase do projeto foi conduzida com excelência e dedicação, superando nossas expectativas.'
+      feedback: 'A equipe da Izabela Soluções foi fundamental na nossa transformação digital. Cada fase do projeto foi conduzida com excelência e dedicação, superando nossas expectativas.'
     },
     {
       image: 'assets/img/testimonials/testimonials-6.jpg',
       name: 'Rafaela Santos',
       position: 'CTO de uma startup',
-      feedback: 'A expertise da Ivorya Soluções no desenvolvimento de soluções escaláveis foi crucial para nossa startup. Graças a eles, alcançamos novos patamares de performance e eficiência.'
+      feedback: 'A expertise da Izabela Soluções no desenvolvimento de soluções escaláveis foi crucial para nossa startup. Graças a eles, alcançamos novos patamares de performance e eficiência.'
     },
     {
       image: 'assets/img/testimonials/testimonials-4.jpg',
       name: 'Amanda Souza',
       position: 'Fundadora de uma empresa de marketing digital',
-      feedback: 'O trabalho da Ivorya Soluções foi essencial para otimizar nossos processos internos. A entrega foi feita dentro do prazo e com altíssima qualidade, impactando positivamente nossos resultados.'
+      feedback: 'O trabalho da Izabela Soluções foi essencial para otimizar nossos processos internos. A entrega foi feita dentro do prazo e com altíssima qualidade, impactando positivamente nossos resultados.'
     },
     {
       image: 'assets/img/testimonials/testimonials-3.jpg',
       name: 'Eduardo Lima',
       position: 'Empreendedor e Consultor de TI',
-      feedback: 'A Ivorya Soluções transformou nossa plataforma com uma solução personalizada e eficiente. O impacto nos nossos resultados foi significativo e imediato.'
+      feedback: 'A Izabela Soluções transformou nossa plataforma com uma solução personalizada e eficiente. O impacto nos nossos resultados foi significativo e imediato.'
     },
     {
       image: 'assets/img/testimonials/testimonials-2.png',
       name: 'Mariana Silva',
       position: 'Coordenadora de uma instituição assistencial',
-      feedback: 'A Ivorya Soluções foi essencial para o desenvolvimento de nossa plataforma de gestão. A equipe demonstrou um compromisso excepcional com nossas necessidades, resultando em uma solução que realmente fez a diferença para nossa instituição.'
+      feedback: 'A Izabela Soluções foi essencial para o desenvolvimento de nossa plataforma de gestão. A equipe demonstrou um compromisso excepcional com nossas necessidades, resultando em uma solução que realmente fez a diferença para nossa instituição.'
     }
   ];
 
